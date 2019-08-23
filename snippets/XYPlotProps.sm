@@ -1,0 +1,2332 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="0.99.7109.29964"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <shortcut>XYPlotProps</shortcut>
+    <identity>
+      <id>9c877d02-b47d-454f-9ccb-6574c8734fe3</id>
+      <revision>53</revision>
+    </identity>
+    <metadata lang="eng">
+      <title>XY Plot Props </title>
+      <author>Arie Lyles</author>
+      <description>This file contains a set of wrappers functions for the XY set prop function. </description>
+    </metadata>
+    <calculation>
+      <precision>2</precision>
+      <exponentialThreshold>10</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>true</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="true" viewMode="0" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="1" orientation="Portrait" width="850" height="1100" />
+      <margins left="39" right="39" top="39" bottom="39" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="0.99.7109.29964" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="Math Region" version="0.99.7109.29964" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="Custom Functions" version="1.1.7097.23285" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
+      <assembly name="SpecialFunctions" version="1.12.7109.29964" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.7109.29964" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region id="0" top="36" color="#000000" bgColor="#ffffff">
+      <area collapsed="false">
+        <title lang="eng">
+          <p>X Y Tools</p>
+        </title>
+      </area>
+      <region id="1" top="72" color="#000000" bgColor="#ffffff">
+        <area collapsed="false">
+          <title lang="eng">
+            <p>Change Log</p>
+          </title>
+        </area>
+        <region id="2" left="27" top="144" width="296" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+          <text lang="eng">
+            <p>08/21/2019: Initial Implementation </p>
+          </text>
+        </region>
+        <region id="3" top="207" color="#000000" bgColor="#ffffff">
+          <area terminator="true" />
+        </region>
+      </region>
+      <region id="4" top="279" color="#000000" bgColor="#ffffff">
+        <area collapsed="false">
+          <title lang="eng">
+            <p>Constants/Units</p>
+          </title>
+        </area>
+        <region id="5" left="18" top="315" width="126" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+          <math>
+            <input>
+              <e type="operand" style="unit">ON</e>
+              <e type="operand">1</e>
+              <e type="operator" args="2">:</e>
+              <e type="operand" style="unit">OFF</e>
+              <e type="operand">0</e>
+              <e type="operator" args="2">:</e>
+              <e type="operand">2</e>
+              <e type="operand">1</e>
+              <e type="function" args="4">mat</e>
+            </input>
+            <result action="numeric">
+              <e type="operand">1</e>
+              <e type="operand">0</e>
+              <e type="operand">2</e>
+              <e type="operand">1</e>
+              <e type="function" args="4">mat</e>
+            </result>
+          </math>
+        </region>
+        <region id="6" left="171" top="315" width="142" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+          <math>
+            <input>
+              <e type="operand" style="unit">TRUE</e>
+              <e type="operand">1</e>
+              <e type="operator" args="2">:</e>
+              <e type="operand" style="unit">FALSE</e>
+              <e type="operand">0</e>
+              <e type="operator" args="2">:</e>
+              <e type="operand">2</e>
+              <e type="operand">1</e>
+              <e type="function" args="4">mat</e>
+            </input>
+            <result action="numeric">
+              <e type="operand">1</e>
+              <e type="operand">0</e>
+              <e type="operand">2</e>
+              <e type="operand">1</e>
+              <e type="function" args="4">mat</e>
+            </result>
+          </math>
+        </region>
+        <region id="7" top="378" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Colors</p>
+            </title>
+          </area>
+          <region id="8" left="54" top="414" width="677" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <text lang="eng">
+              <p>Creating Units for each color. This list come from mkraska's interactive handbook
+The color units are defined as color.colorname</p>
+            </text>
+          </region>
+          <region id="9" left="72" top="459" width="679" height="639" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="operand" style="string">aliceblue</e>
+                <e type="operand" style="string">antiquewhite</e>
+                <e type="operand" style="string">aqua</e>
+                <e type="operand" style="string">aquamarine</e>
+                <e type="operand" style="string">azure</e>
+                <e type="operand" style="string">beige</e>
+                <e type="operand" style="string">bisque</e>
+                <e type="operand" style="string">blanchedalmond</e>
+                <e type="operand" style="string">black</e>
+                <e type="operand" style="string">blue</e>
+                <e type="operand" style="string">blueviolet</e>
+                <e type="operand" style="string">brown</e>
+                <e type="operand" style="string">burlywood</e>
+                <e type="operand" style="string">cadetblue</e>
+                <e type="operand" style="string">chartreuse</e>
+                <e type="operand" style="string">chocolate</e>
+                <e type="operand" style="string">coral</e>
+                <e type="operand" style="string">cornflowerblue</e>
+                <e type="operand" style="string">cornsilk</e>
+                <e type="operand" style="string">crimson</e>
+                <e type="operand" style="string">cyan</e>
+                <e type="operand" style="string">darkblue</e>
+                <e type="operand" style="string">darkcyan</e>
+                <e type="operand" style="string">darkgoldenrod</e>
+                <e type="operand" style="string">darkgray</e>
+                <e type="operand" style="string">darkgreen</e>
+                <e type="operand" style="string">darkkhaki</e>
+                <e type="operand" style="string">darkmagenta</e>
+                <e type="operand" style="string">darkolivegreen</e>
+                <e type="operand" style="string">darkorange</e>
+                <e type="operand" style="string">darkorchid</e>
+                <e type="operand" style="string">darkred</e>
+                <e type="operand" style="string">darksalmon</e>
+                <e type="operand" style="string">darkseagreen</e>
+                <e type="operand" style="string">darkslateblue</e>
+                <e type="operand" style="string">darkslategray</e>
+                <e type="operand" style="string">darkturquoise</e>
+                <e type="operand" style="string">darkviolet</e>
+                <e type="operand" style="string">deeppink</e>
+                <e type="operand" style="string">deepskyblue</e>
+                <e type="operand" style="string">dimgray</e>
+                <e type="operand" style="string">dodgerblue</e>
+                <e type="operand" style="string">firebrick</e>
+                <e type="operand" style="string">floralwhite</e>
+                <e type="operand" style="string">forestgreen</e>
+                <e type="operand" style="string">fuchsia</e>
+                <e type="operand" style="string">gainsboro</e>
+                <e type="operand" style="string">ghostwhite</e>
+                <e type="operand" style="string">gold</e>
+                <e type="operand" style="string">goldenrod</e>
+                <e type="operand" style="string">gray</e>
+                <e type="operand" style="string">green</e>
+                <e type="operand" style="string">greenyellow</e>
+                <e type="operand" style="string">honeydew</e>
+                <e type="operand" style="string">hotpink</e>
+                <e type="operand" style="string">indianred</e>
+                <e type="operand" style="string">indigo</e>
+                <e type="operand" style="string">ivory</e>
+                <e type="operand" style="string">khaki</e>
+                <e type="operand" style="string">lavender</e>
+                <e type="operand" style="string">lavenderblush</e>
+                <e type="operand" style="string">lawngreen</e>
+                <e type="operand" style="string">lemonchiffon</e>
+                <e type="operand" style="string">lightblue</e>
+                <e type="operand" style="string">lightcoral</e>
+                <e type="operand" style="string">lightcyan</e>
+                <e type="operand" style="string">lightgoldenrodyellow</e>
+                <e type="operand" style="string">lightgray</e>
+                <e type="operand" style="string">lightgreen</e>
+                <e type="operand" style="string">lightpink</e>
+                <e type="operand" style="string">lightsalmon</e>
+                <e type="operand" style="string">lightseagreen</e>
+                <e type="operand" style="string">lightskyblue</e>
+                <e type="operand" style="string">lightslategray</e>
+                <e type="operand" style="string">lightsteelblue</e>
+                <e type="operand" style="string">lightyellow</e>
+                <e type="operand" style="string">lime</e>
+                <e type="operand" style="string">limegreen</e>
+                <e type="operand" style="string">linen</e>
+                <e type="operand" style="string">magenta</e>
+                <e type="operand" style="string">maroon</e>
+                <e type="operand" style="string">mediumaquamarine</e>
+                <e type="operand" style="string">mediumblue</e>
+                <e type="operand" style="string">mediumorchid</e>
+                <e type="operand" style="string">mediumpurple</e>
+                <e type="operand" style="string">mediumseagreen</e>
+                <e type="operand" style="string">mediumslateblue</e>
+                <e type="operand" style="string">mediumspringgreen</e>
+                <e type="operand" style="string">mediumturquoise</e>
+                <e type="operand" style="string">mediumvioletred</e>
+                <e type="operand" style="string">midnightblue</e>
+                <e type="operand" style="string">mintcream</e>
+                <e type="operand" style="string">mistyrose</e>
+                <e type="operand" style="string">moccasin</e>
+                <e type="operand" style="string">navajowhite</e>
+                <e type="operand" style="string">navy</e>
+                <e type="operand" style="string">oldlace</e>
+                <e type="operand" style="string">olive</e>
+                <e type="operand" style="string">olivedrab</e>
+                <e type="operand" style="string">orange</e>
+                <e type="operand" style="string">orangered</e>
+                <e type="operand" style="string">orchid</e>
+                <e type="operand" style="string">palegoldenrod</e>
+                <e type="operand" style="string">palegreen</e>
+                <e type="operand" style="string">paleturquoise</e>
+                <e type="operand" style="string">palevioletred</e>
+                <e type="operand" style="string">papayawhip</e>
+                <e type="operand" style="string">peachpuff</e>
+                <e type="operand" style="string">peru</e>
+                <e type="operand" style="string">pink</e>
+                <e type="operand" style="string">plum</e>
+                <e type="operand" style="string">powderblue</e>
+                <e type="operand" style="string">purple</e>
+                <e type="operand" style="string">red</e>
+                <e type="operand" style="string">rosybrown</e>
+                <e type="operand" style="string">royalblue</e>
+                <e type="operand" style="string">saddlebrown</e>
+                <e type="operand" style="string">salmon</e>
+                <e type="operand" style="string">sandybrown</e>
+                <e type="operand" style="string">seagreen</e>
+                <e type="operand" style="string">seashell</e>
+                <e type="operand" style="string">sienna</e>
+                <e type="operand" style="string">silver</e>
+                <e type="operand" style="string">skyblue</e>
+                <e type="operand" style="string">slateblue</e>
+                <e type="operand" style="string">slategray</e>
+                <e type="operand" style="string">snow</e>
+                <e type="operand" style="string">springgreen</e>
+                <e type="operand" style="string">steelblue</e>
+                <e type="operand" style="string">tan</e>
+                <e type="operand" style="string">teal</e>
+                <e type="operand" style="string">thistle</e>
+                <e type="operand" style="string">tomato</e>
+                <e type="operand" style="string">turquoise</e>
+                <e type="operand" style="string">violet</e>
+                <e type="operand" style="string">wheat</e>
+                <e type="operand" style="string">white</e>
+                <e type="operand" style="string">whitesmoke</e>
+                <e type="operand" style="string">yellow</e>
+                <e type="operand" style="string">yellowgreen</e>
+                <e type="operand">35</e>
+                <e type="operand">4</e>
+                <e type="function" args="142">mat</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="10" left="27" top="1125" width="254" height="28" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">colorList</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="function" args="1">Zeros</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="11" left="18" top="1152" width="406" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">j</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operator" args="2">≤</e>
+                <e type="operand">j</e>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">'color.</e>
+                <e type="operand">temp</e>
+                <e type="operand">M</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">:temp</e>
+                <e type="function" args="3">concat</e>
+                <e type="function" args="1">str2num</e>
+                <e type="operand">colorList</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="operand">temp</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">2</e>
+                <e type="operand">1</e>
+                <e type="function" args="4">line</e>
+                <e type="function" args="4">for</e>
+              </input>
+            </math>
+          </region>
+          <region id="12" left="63" top="1260" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+            <text lang="eng">
+              <p>Adding Transparent</p>
+            </text>
+          </region>
+          <region id="13" left="72" top="1305" width="242" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand" style="unit">color.transparent</e>
+                <e type="operand" style="string">transparent</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="14" left="72" top="1332" width="352" height="35" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">colorList</e>
+                <e type="operand">colorList</e>
+                <e type="function" args="1">length</e>
+                <e type="function" args="2">el</e>
+                <e type="operand" style="unit">color.transparent</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="15" left="63" top="1377" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="function" args="1">Clear</e>
+              </input>
+              <result action="numeric">
+                <e type="operand">1</e>
+              </result>
+            </math>
+          </region>
+          <region id="16" top="1404" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="17" top="1449" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Grid Pattern</p>
+            </title>
+          </area>
+          <region id="18" left="18" top="1485" width="481" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <text lang="eng">
+              <p>Creating Units for each grid pattern type.
+The grid pattern units are defined as gridPattern.pattern</p>
+            </text>
+          </region>
+          <region id="19" left="63" top="1548" width="149" height="99" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="operand" style="string">solid</e>
+                <e type="operand" style="string">dot</e>
+                <e type="operand" style="string">dash</e>
+                <e type="operand" style="string">dashdot</e>
+                <e type="operand" style="string">dashdotdot</e>
+                <e type="operand">5</e>
+                <e type="operand">1</e>
+                <e type="function" args="7">mat</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="20" left="18" top="1665" width="447" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">j</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operator" args="2">≤</e>
+                <e type="operand">j</e>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">'gridPattern.</e>
+                <e type="operand">temp</e>
+                <e type="operand">M</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">:temp</e>
+                <e type="function" args="3">concat</e>
+                <e type="function" args="1">str2num</e>
+                <e type="function" args="4">for</e>
+              </input>
+            </math>
+          </region>
+          <region id="21" left="18" top="1746" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">M</e>
+                <e type="function" args="1">Clear</e>
+              </input>
+              <result action="numeric">
+                <e type="operand">1</e>
+              </result>
+            </math>
+          </region>
+          <region id="22" top="1881" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="23" top="1926" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Symbol Type</p>
+            </title>
+          </area>
+          <region id="24" left="27" top="1953" width="414" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <text lang="eng">
+              <p>Creating Units for each trace symbol type.
+The symbol type units are defined as symType.Type</p>
+            </text>
+          </region>
+          <region id="25" left="99" top="2025" width="229" height="261" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="operand" style="string">box</e>
+                <e type="operand" style="string">circle</e>
+                <e type="operand" style="string">cross</e>
+                <e type="operand" style="string">diamond</e>
+                <e type="operand" style="string">dot</e>
+                <e type="operand" style="string">invertedTriangle</e>
+                <e type="operand" style="string">none</e>
+                <e type="operand" style="string">openDiamond</e>
+                <e type="operand" style="string">openInvertedTriangle</e>
+                <e type="operand" style="string">openTriangle</e>
+                <e type="operand" style="string">square</e>
+                <e type="operand" style="string">star</e>
+                <e type="operand" style="string">triangle</e>
+                <e type="operand" style="string">plus</e>
+                <e type="operand">14</e>
+                <e type="operand">1</e>
+                <e type="function" args="16">mat</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="26" left="18" top="2313" width="415" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">j</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operator" args="2">≤</e>
+                <e type="operand">j</e>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">'symType.</e>
+                <e type="operand">temp</e>
+                <e type="operand">M</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">:temp</e>
+                <e type="function" args="3">concat</e>
+                <e type="function" args="1">str2num</e>
+                <e type="function" args="4">for</e>
+              </input>
+            </math>
+          </region>
+          <region id="27" left="54" top="2394" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="function" args="1">Clear</e>
+              </input>
+              <result action="numeric">
+                <e type="operand">1</e>
+              </result>
+            </math>
+          </region>
+          <region id="28" top="2421" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="29" top="2466" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Legend Position</p>
+            </title>
+          </area>
+          <region id="30" left="90" top="2502" width="141" height="153" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">M</e>
+                <e type="operand" style="string">north</e>
+                <e type="operand" style="string">northwest</e>
+                <e type="operand" style="string">west</e>
+                <e type="operand" style="string">southwest</e>
+                <e type="operand" style="string">south</e>
+                <e type="operand" style="string">southeast</e>
+                <e type="operand" style="string">east</e>
+                <e type="operand" style="string">northeast</e>
+                <e type="operand">8</e>
+                <e type="operand">1</e>
+                <e type="function" args="10">mat</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="31" left="45" top="2673" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">j</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operator" args="2">≤</e>
+                <e type="operand">j</e>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">'legend.</e>
+                <e type="operand">temp</e>
+                <e type="operand">M</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">:temp</e>
+                <e type="function" args="3">concat</e>
+                <e type="function" args="1">str2num</e>
+                <e type="function" args="4">for</e>
+              </input>
+            </math>
+          </region>
+          <region id="32" left="81" top="2754" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">M</e>
+                <e type="function" args="1">Clear</e>
+              </input>
+              <result action="numeric">
+                <e type="operand">1</e>
+              </result>
+            </math>
+          </region>
+          <region id="33" top="2781" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="34" top="2826" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Number Format</p>
+            </title>
+          </area>
+          <region id="35" left="126" top="2934" width="157" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">M</e>
+                <e type="operand" style="string">General</e>
+                <e type="operand" style="string">Exponential</e>
+                <e type="operand" style="string">FixedPoint</e>
+                <e type="operand">3</e>
+                <e type="operand">1</e>
+                <e type="function" args="5">mat</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="36" left="72" top="3024" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand">j</e>
+                <e type="operand">M</e>
+                <e type="function" args="1">length</e>
+                <e type="operator" args="2">≤</e>
+                <e type="operand">j</e>
+                <e type="operand">j</e>
+                <e type="operand">1</e>
+                <e type="operator" args="2">+</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">'numFmt.</e>
+                <e type="operand">temp</e>
+                <e type="operand">M</e>
+                <e type="operand">j</e>
+                <e type="function" args="2">el</e>
+                <e type="bracket">(</e>
+                <e type="operator" args="2">:</e>
+                <e type="operand" style="string">:temp</e>
+                <e type="function" args="3">concat</e>
+                <e type="function" args="1">str2num</e>
+                <e type="function" args="4">for</e>
+              </input>
+            </math>
+          </region>
+          <region id="37" left="108" top="3105" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">M</e>
+                <e type="function" args="1">Clear</e>
+              </input>
+              <result action="numeric">
+                <e type="operand">1</e>
+              </result>
+            </math>
+          </region>
+          <region id="38" top="3141" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="39" top="3186" color="#000000" bgColor="#ffffff">
+          <area terminator="true" />
+        </region>
+      </region>
+      <region id="40" top="3249" color="#000000" bgColor="#ffffff">
+        <area collapsed="false">
+          <title lang="eng">
+            <p>Individual setProp functions</p>
+          </title>
+        </area>
+        <region id="41" left="18" top="3285" width="753" height="88" color="#000000" bgColor="#80ff80" fontSize="10">
+          <text lang="eng">
+            <p>The Collapsable areas below hold the functions that directly call the setprop command  
+for the associated property. It is intended that all of the configurable properties within 
+XY Ploy have associated function wrappers for them. However, the setprop command may not
+implement all properties. When known, it is my intention to indicate this status near the
+function definition. </p>
+          </text>
+        </region>
+        <region id="42" top="3402" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Chart Properties</p>
+            </title>
+          </area>
+          <region id="43" left="18" top="3438" width="464" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.points("points:integer","pName:string")
+Sets pName.Points property to the value of points. </p>
+              </description>
+              <input>
+                <e type="operand">points</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.points</e>
+                <e type="operand" style="string">{pName}.Points</e>
+                <e type="operand">points</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="44" left="18" top="3510" width="316" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">points</e>
+                <e type="function" args="1">XY.points</e>
+                <e type="operand">points</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.points</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="45" left="18" top="3573" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.name("s:string","pName:string")
+Sets the pName.Name property to the value of name.
+Note: All XY Plots with name p will be changed. Use with caution. </p>
+              </description>
+              <input>
+                <e type="operand">name</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.name</e>
+                <e type="operand" style="string">{pName}.Name</e>
+                <e type="operand">name</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="46" left="18" top="3672" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.name("s:string")
+Sets the pName.Name property to the value of s.
+Note: All XY Plots with name p will be changed. Use with caution. The intent of this function is to 
+set the name of an XY Plot immediately before it is created. </p>
+              </description>
+              <input>
+                <e type="operand">name</e>
+                <e type="function" args="1">XY.name</e>
+                <e type="operand" style="string">XYPlot.Name</e>
+                <e type="operand">name</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="47" left="18" top="3780" width="612" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.backColor("color:string", "pName:string")
+Sets pName.ChartStyle.PlotBackColor property to value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.backColor</e>
+                <e type="operand" style="string">{pName}.ChartStyle.PlotBackColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="48" left="18" top="3861" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.backColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.backColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="49" left="18" top="3897" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.borderColor("color:string", "pName:string")
+Sets pName.ChartStyle.PlotBorderColor property to value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.borderColor</e>
+                <e type="operand" style="string">{pName}.ChartStyle.PlotBorderColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="50" left="18" top="3978" width="364" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math optimize="2" decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.borderColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.borderColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="51" top="4050" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="52" top="4131" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Title Properties</p>
+            </title>
+          </area>
+          <region id="53" left="54" top="4167" width="474" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.title("title:string","pName:string")
+Sets the pName.Title.Text property to value of title.</p>
+              </description>
+              <input>
+                <e type="operand">title</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.title</e>
+                <e type="operand" style="string">{pName}.Title.Text</e>
+                <e type="operand">title</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="54" left="54" top="4230" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">title</e>
+                <e type="function" args="1">XY.title</e>
+                <e type="operand">title</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.title</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="55" left="54" top="4284" width="524" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>titleFont("font:string","pName:string")
+Sets the pName.Title.TitleFont property to value of font.
+Example of font input: "Courier,12pt,style=bold,italic" </p>
+              </description>
+              <input>
+                <e type="operand">font</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.titleFont</e>
+                <e type="operand" style="string">{pName}.Title.TitleFont</e>
+                <e type="operand">font</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="56" left="54" top="4365" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">font</e>
+                <e type="function" args="1">XY.titleFont</e>
+                <e type="operand">font</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.titleFont</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="57" left="45" top="4401" width="522" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.titleColor("color:string","plotName:string")
+Sets the pName.Title.TitleFontColor property to the value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">s</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.titleColor</e>
+                <e type="operand" style="string">{pName}.Title.TitleFontColor</e>
+                <e type="operand">s</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="58" left="45" top="4482" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">s</e>
+                <e type="function" args="1">XY.titleColor</e>
+                <e type="operand">s</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.titleColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="59" left="54" top="4545" width="489" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">title</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="4">XY.title</e>
+                <e type="operand">title</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.title</e>
+                <e type="operand">font</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.titleFont</e>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.titleColor</e>
+                <e type="operand">3</e>
+                <e type="operand">1</e>
+                <e type="function" args="5">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="60" left="63" top="4662" width="488" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">title</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="function" args="3">XY.title</e>
+                <e type="operand">title</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="4">XY.title</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="61" top="4878" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="62" top="4959" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Grid Properties</p>
+            </title>
+          </area>
+          <region id="63" left="18" top="4986" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XGrid("b:bool","pName:string")
+Sets the pName.Grid.IsXGrid property with the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XGrid</e>
+                <e type="operand" style="string">{pName}.Grid.IsXGrid</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="64" left="18" top="5049" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.XGrid</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XGrid</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="65" left="18" top="5085" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YGrid("b:bool","pName:string")
+Sets the pName.Grid.IsYGrid property with the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YGrid</e>
+                <e type="operand" style="string">{pName}.Grid.IsYGrid</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="66" left="18" top="5148" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.YGrid</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YGrid</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="67" left="18" top="5202" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.gridColor("color:string","pName:string")
+Sets the pName.Grid.GridColor property with the value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridColor</e>
+                <e type="operand" style="string">{pName}.Grid.GridColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="68" left="18" top="5283" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.gridColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.gridColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="69" left="9" top="5364" width="525" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.gridThickness("d:number","pName:string")
+Sets the pName.Grid.GridThickness property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridThickness</e>
+                <e type="operand" style="string">{pName}.Grid.GridThickness</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="70" left="9" top="5427" width="326" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.gridThickness</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.gridThickness</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="71" left="9" top="5490" width="592" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.gridPattern("pattern:string","pName:string")
+Sets the pName.Grid.GridPattern parameter of the XY Plot with name pattern.
+Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
+              </description>
+              <input>
+                <e type="operand">pattern</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridPattern</e>
+                <e type="operand" style="string">{pName}.Grid.GridPattern</e>
+                <e type="operand">pattern</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="72" left="9" top="5571" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">pattern</e>
+                <e type="function" args="1">XY.gridPattern</e>
+                <e type="operand">pattern</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.gridPattern</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="73" left="18" top="5643" width="611" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">color</e>
+                <e type="operand">pattern</e>
+                <e type="operand">thickness</e>
+                <e type="operand">pName</e>
+                <e type="function" args="5">XY.grid</e>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.grid</e>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridColor</e>
+                <e type="operand">pattern</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridPattern</e>
+                <e type="operand">thickness</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.gridThickness</e>
+                <e type="operand">4</e>
+                <e type="operand">1</e>
+                <e type="function" args="6">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="74" left="18" top="5778" width="632" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">color</e>
+                <e type="operand">pattern</e>
+                <e type="operand">thickness</e>
+                <e type="function" args="4">XY.grid</e>
+                <e type="operand">b</e>
+                <e type="operand">color</e>
+                <e type="operand">pattern</e>
+                <e type="operand">thickness</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="5">XY.grid</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="75" left="18" top="5841" width="271" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">bool</e>
+                <e type="operand">p</e>
+                <e type="function" args="2">XY.grid</e>
+                <e type="operand">bool</e>
+                <e type="operand">p</e>
+                <e type="function" args="2">XY.XGrid</e>
+                <e type="operand">bool</e>
+                <e type="operand">p</e>
+                <e type="function" args="2">XY.YGrid</e>
+                <e type="operand">2</e>
+                <e type="operand">1</e>
+                <e type="function" args="4">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="76" left="18" top="5922" width="260" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">bool</e>
+                <e type="function" args="1">XY.grid</e>
+                <e type="operand">bool</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.grid</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="77" top="6021" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="78" top="6084" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>XAxis Properties</p>
+            </title>
+          </area>
+          <region id="79" left="0" top="6111" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XMin("d:number","pName:string")
+Sets the pName.XAxis.Min property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XMin</e>
+                <e type="operand" style="string">{pName}.XAxis.Min</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="80" left="0" top="6174" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.XMin</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XMin</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="81" left="0" top="6237" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XMax("d:number","pName:string")
+Sets the pName.XAxis.Max property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XMax</e>
+                <e type="operand" style="string">{pName}.XAxis.Max</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="82" left="0" top="6309" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.XMax</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XMax</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="83" left="0" top="6354" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XTick("d:number","pName:string")
+Sets the pName.XAxis.Tick property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XTick</e>
+                <e type="operand" style="string">{pName}.XAxis.Tick</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="84" left="0" top="6417" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.XTick</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XTick</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="85" left="0" top="6462" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XDecPlaces("d:number","pName:string")
+Sets the pName.XAxis.DecimalPlaces property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XDecPlaces</e>
+                <e type="operand" style="string">{pName}.XAxis.DecimalPlaces</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="86" left="0" top="6534" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.XDecPlaces</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XDecPlaces</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="87" left="0" top="6570" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XNumFmt("numFmt:string","pName:string")
+Sets the pName.XAxis.NumberFormat property with the value of numFmt.
+Note: Units wit the prefix numFmt. are defined above.</p>
+              </description>
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XNumFmt</e>
+                <e type="operand" style="string">{pName}.XAxis.NumberFormat</e>
+                <e type="operand">numFmt</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="88" left="0" top="6651" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="function" args="1">XY.XNumFmt</e>
+                <e type="operand">numFmt</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XNumFmt</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="89" left="0" top="6687" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.hideXAxis("b:bool","pName:string"
+Sets the pName.XAxis.Hidden property with the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pname</e>
+                <e type="function" args="2">XY.hideXAxis</e>
+                <e type="operand" style="string">{pName}.XAxis.Hidden</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="90" left="0" top="6750" width="300" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.hideXAxis</e>
+                <e type="operand">bool</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.hideXAxis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="91" left="0" top="6849" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="false" position="Top" lang="eng">
+                <p></p>
+              </description>
+              <input>
+                <e type="operand">xmin</e>
+                <e type="operand">xmax</e>
+                <e type="operand">xtick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="4">XY.XAxis</e>
+                <e type="operand">xmin</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XMin</e>
+                <e type="operand">xmax</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XMax</e>
+                <e type="operand">xtick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XTick</e>
+                <e type="operand">3</e>
+                <e type="operand">1</e>
+                <e type="function" args="5">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="92" left="0" top="6939" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">xmin</e>
+                <e type="operand">xmax</e>
+                <e type="operand">xtick</e>
+                <e type="function" args="3">XY.XAxis</e>
+                <e type="operand">xmin</e>
+                <e type="operand">xmax</e>
+                <e type="operand">xtick</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="4">XY.XAxis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="93" top="7020" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="94" top="7092" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>YAxis Properties</p>
+            </title>
+          </area>
+          <region id="95" left="27" top="7137" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YMin("d:number","pName:string")
+Sets the pName.YAxis.Min property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YMin</e>
+                <e type="operand" style="string">{pName}.YAxis.Min</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="96" left="27" top="7209" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.YMin</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YMin</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="97" left="36" top="7245" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YMax("d:number","pName:string")
+Sets the pName.YAxis.Max property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YMax</e>
+                <e type="operand" style="string">{pName}.YAxis.Max</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="98" left="36" top="7308" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.YMax</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YMax</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="99" left="36" top="7344" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YTick("d:number","pName:string")
+Sets the pName.YAxis.Tick property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YTick</e>
+                <e type="operand" style="string">{pName}.YAxis.Tick</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="100" left="36" top="7407" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.YTick</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YTick</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="101" left="36" top="7443" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YDecPlaces("d:number","pName:string")
+Sets the pName.YAxis.DecimalPlaces property with the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YDecPlaces</e>
+                <e type="operand" style="string">{pName}.YAxis.DecimalPlaces</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="102" left="36" top="7515" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.YDecPlaces</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YDecPlaces</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="103" left="36" top="7560" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YNumFmt("numFmt:string","pName:string")
+Sets the pName.YAxis.NumberFormat proprety to the value of numFmt.
+Note: Units wit the prefix numFmt. are defined above.</p>
+              </description>
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YNumFmt</e>
+                <e type="operand" style="string">{pName}.YAxis.NumberFormat</e>
+                <e type="operand">numFmt</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="104" left="36" top="7641" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="function" args="1">XY.YNumFmt</e>
+                <e type="operand">numFmt</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YNumFmt</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="105" left="36" top="7668" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.hideYAxis("b:bool","pName:string"
+Sets the pName.YAxis.Hidden property with the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.hideYAxis</e>
+                <e type="operand" style="string">{pName}.YAxis.Hidden</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="106" left="36" top="7731" width="276" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.hideYAxis</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.hideYAxis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="107" left="36" top="7821" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">ymin</e>
+                <e type="operand">ymax</e>
+                <e type="operand">ytick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="4">XY.YAxis</e>
+                <e type="operand">ymin</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YMin</e>
+                <e type="operand">ymax</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YMax</e>
+                <e type="operand">ytick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YTick</e>
+                <e type="operand">3</e>
+                <e type="operand">1</e>
+                <e type="function" args="5">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="108" left="36" top="7911" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">ymin</e>
+                <e type="operand">ymax</e>
+                <e type="operand">ytick</e>
+                <e type="function" args="3">XY.YAxis</e>
+                <e type="operand">ymin</e>
+                <e type="operand">ymax</e>
+                <e type="operand">ytick</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="4">XY.YAxis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="109" top="8073" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="110" top="8145" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Y2Axis Properties</p>
+            </title>
+          </area>
+          <region id="111" left="18" top="8199" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.Y2Min("d:number", "pName:string")
+Sets the pName.Y2Axis.Min property to the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Min</e>
+                <e type="operand" style="string">{pName}.Y2Axis.Min</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="112" left="18" top="8271" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.Y2Min</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2Min</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="113" left="18" top="8316" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.Y2Max("d:number","pName:string")
+Sets the pName.Y2Axis.Max property to the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Max</e>
+                <e type="operand" style="string">{pName}.Y2Axis.Max</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="114" left="18" top="8379" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.Y2Max</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2Max</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="115" left="18" top="8415" width="424" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.Y2Tick("d:number","pName:string")
+Sets the pName.Y2Axis.Tick property to the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Tick</e>
+                <e type="operand" style="string">{pName}.Y2Axis.Tick</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="116" left="18" top="8478" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.Y2Tick</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2Tick</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="117" left="18" top="8523" width="469" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.IsY2Axis("b:bool","pName:string")
+Sets the pName.Y2Axis.IsY2Axis property to the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.IsY2Axis</e>
+                <e type="operand" style="string">{pName}.Y2Axis.IsY2Axis</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="118" left="18" top="8586" width="262" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.IsY2Axis</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.IsY2Axis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="119" left="18" top="8622" width="528" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.Y2DecPlaces("d:number","pName:string")
+Sets the pNameY2Axis.DecimalPlaces property to the value of d.</p>
+              </description>
+              <input>
+                <e type="operand">d</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2DecPlaces</e>
+                <e type="operand" style="string">{pName}.Y2Axis.DecimalPlaces</e>
+                <e type="operand">d</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="120" left="18" top="8685" width="300" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">d</e>
+                <e type="function" args="1">XY.Y2DecPlaces</e>
+                <e type="operand">d</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2DecPlaces</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="121" left="18" top="8721" width="581" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.Y2NumFmt("numFmt:string","pName:string")
+Sets the pName.Y2Axis.NumberFormat property to the value of numFmt.
+Note: Units wit the prefix numFmt.{fmt} are defined above.</p>
+              </description>
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2NumFmt</e>
+                <e type="operand" style="string">{pName}.Y2Axis.NumberFormat</e>
+                <e type="operand">numFmt</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="122" left="18" top="8802" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">numFmt</e>
+                <e type="function" args="1">XY.Y2NumFmt</e>
+                <e type="operand">numFmt</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2NumFmt</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="123" left="18" top="8847" width="466" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.hideY2Axis("b:bool","pName:string"
+Sets the pName.Y2Axis.Hidden property with the value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.hideY2Axis</e>
+                <e type="operand" style="string">{pName}.Y2Axis.Hidden</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="124" left="18" top="8910" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.hideY2Axis</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.hideY2Axis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="125" left="18" top="8973" width="493" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">y2min</e>
+                <e type="operand">y2max</e>
+                <e type="operand">y2tick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="4">XY.Y2Axis</e>
+                <e type="operand" style="unit">ON</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.IsY2Axis</e>
+                <e type="operand">y2min</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Min</e>
+                <e type="operand">y2max</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Max</e>
+                <e type="operand">y2tick</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Tick</e>
+                <e type="operand">4</e>
+                <e type="operand">1</e>
+                <e type="function" args="6">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="126" left="18" top="9072" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">y2min</e>
+                <e type="operand">y2max</e>
+                <e type="operand">y2tick</e>
+                <e type="function" args="3">XY.Y2Axis</e>
+                <e type="operand">y2min</e>
+                <e type="operand">y2max</e>
+                <e type="operand">y2tick</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="4">XY.Y2Axis</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="127" top="9126" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="128" top="9189" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>XY Label Properties</p>
+            </title>
+          </area>
+          <region id="129" left="18" top="9243" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.XLabel("s:string","pName:string")
+Sets the pName.XYLabel.XLabel property with the value of s.</p>
+              </description>
+              <input>
+                <e type="operand">s</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XLabel</e>
+                <e type="operand" style="string">{pName}.XYLabel.XLabel</e>
+                <e type="operand">s</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="130" left="18" top="9315" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">s</e>
+                <e type="function" args="1">XY.XLabel</e>
+                <e type="operand">s</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.XLabel</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="131" left="18" top="9360" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YLabel("s:string","pName:string")
+Sets the pName.XYLabel.YLabel property with the value of s.</p>
+              </description>
+              <input>
+                <e type="operand">s</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YLabel</e>
+                <e type="operand" style="string">{pName}.XYLabel.YLabel</e>
+                <e type="operand">s</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="132" left="18" top="9423" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">s</e>
+                <e type="function" args="1">XY.YLabel</e>
+                <e type="operand">s</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.YLabel</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="133" left="27" top="9477" width="463" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.YLabel("s:string","pName:string")
+Sets the pName.XYLabel.YLabel property with the value of s.</p>
+              </description>
+              <input>
+                <e type="operand">s</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.Y2Label</e>
+                <e type="operand" style="string">{pName}.XYLabel.Y2Label</e>
+                <e type="operand">s</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="134" left="27" top="9540" width="250" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">s</e>
+                <e type="function" args="1">XY.Y2Label</e>
+                <e type="operand">s</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.Y2Label</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="135" left="27" top="9576" width="540" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.labelFont("font:string","pName:string")
+Sets the pName.XYLabel.LabelFont property with the value of font.
+Example of font input: "Courier,12pt,style=bold,italic" </p>
+              </description>
+              <input>
+                <e type="operand">font</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.labelFont</e>
+                <e type="operand" style="string">{pName}.XYLabel.LabelFont</e>
+                <e type="operand">font</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="136" left="27" top="9657" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">font</e>
+                <e type="function" args="1">XY.labelFont</e>
+                <e type="operand">font</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.labelFont</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="137" left="27" top="9684" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.LabelFontColor("color:string","2:string")
+Sets the pName.XYLabel.LabelFontColor property with the value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.labelFontColor</e>
+                <e type="operand" style="string">{pName}.XYLabel.LabelFontColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="138" left="27" top="9765" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.labelFontColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.labelFontColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="139" left="36" top="9837" width="585" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">xlabel</e>
+                <e type="operand">ylabel</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="5">XY.label</e>
+                <e type="operand">xlabel</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.XLabel</e>
+                <e type="operand">ylabel</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.YLabel</e>
+                <e type="operand">font</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.labelFont</e>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.labelFontColor</e>
+                <e type="operand">4</e>
+                <e type="operand">1</e>
+                <e type="function" args="6">line</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="140" left="36" top="9990" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">xlabel</e>
+                <e type="operand">ylabel</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="function" args="4">XY.label</e>
+                <e type="operand">xlabel</e>
+                <e type="operand">ylabel</e>
+                <e type="operand">font</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="5">XY.label</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="141" top="10044" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="142" top="10098" color="#000000" bgColor="#ffffff">
+          <area collapsed="false">
+            <title lang="eng">
+              <p>Legend Properties</p>
+            </title>
+          </area>
+          <region id="143" left="9" top="10143" width="551" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendBorder("b:bool","pName:string")
+Sets the pName.Legend.IsBorderVisible property to value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legendBorder</e>
+                <e type="operand" style="string">{pName}.Legend.IsBorderVisible</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="144" left="9" top="10215" width="314" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.legendBorder</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendBorder</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="145" left="9" top="10251" width="512" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legend("b:bool","pName:string")
+Sets the pName.Legend.IsLegendVisible property to value of b.</p>
+              </description>
+              <input>
+                <e type="operand">b</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legend</e>
+                <e type="operand" style="string">{pName}.Legend.IsLegendVisible</e>
+                <e type="operand">b</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="146" left="9" top="10323" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">b</e>
+                <e type="function" args="1">XY.legend</e>
+                <e type="operand">b</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legend</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="147" left="9" top="10368" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendBackground("color:string","pName:string")
+Sets the pName.Legend.LegendBackColor property to value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legendBackground</e>
+                <e type="operand" style="string">{pName}.Legend.LegendBackColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="148" left="9" top="10449" width="428" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.legendBackground</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendBackground</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="149" left="9" top="10485" width="663" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendBorderColor("color:string","pName:string")
+Sets the pName.Legend.LegendBorderColor property to value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legendBorderColor</e>
+                <e type="operand" style="string">{pName}.Legend.LegendBorderColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="150" left="9" top="10566" width="442" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.legendBorderColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendBorderColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="151" left="9" top="10611" width="668" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendPosition("position:number","pName:string")
+Sets the pName.Legend.LegendPosition property to value of position
+Note: Units with prefix "legend.{position}" previously defined. </p>
+              </description>
+              <input>
+                <e type="operand">position</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legendPosition</e>
+                <e type="operand" style="string">{pName}.Legend.LegendPosition</e>
+                <e type="operand">position</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="152" left="9" top="10692" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+              <input>
+                <e type="operand">position</e>
+                <e type="function" args="1">XY.legendPosition</e>
+                <e type="operand">position</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendPosition</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="153" left="18" top="10791" width="586" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendTextColor("color:string","pName:string")
+Sets the pName.Legend.TextColor property to value of color.
+Note: Units with prefix "color.{color}" have been previously defined.</p>
+              </description>
+              <input>
+                <e type="operand">color</e>
+                <e type="operand">pName</e>
+                <e type="function" args="2">XY.legendTextColor</e>
+                <e type="operand" style="string">{pName}.Legend.TextColor</e>
+                <e type="operand">color</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="154" left="18" top="10872" width="416" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">color</e>
+                <e type="function" args="1">XY.legendTextColor</e>
+                <e type="operand">color</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendTextColor</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="155" left="18" top="10908" width="482" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <description active="true" position="Top" lang="eng">
+                <p>XY.legendFont("font:string","pName:string")
+Sets the pName.Legend.LegendFont property to value of font.
+Example of font input: "Courier,12pt,style=bold,italic" </p>
+              </description>
+              <input>
+                <e type="operand">font</e>
+                <e type="operand">p</e>
+                <e type="function" args="2">XY.legendFont</e>
+                <e type="operand" style="string">{p}.Legend.LegendFont</e>
+                <e type="operand">font</e>
+                <e type="function" args="2">setprop</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="156" left="18" top="10989" width="336" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <math>
+              <input>
+                <e type="operand">font</e>
+                <e type="function" args="1">XY.legendFont</e>
+                <e type="operand">font</e>
+                <e type="operand">PLOT</e>
+                <e type="function" args="2">XY.legendFont</e>
+                <e type="operator" args="2">:</e>
+              </input>
+            </math>
+          </region>
+          <region id="157" top="11052" color="#000000" bgColor="#ffffff">
+            <area terminator="true" />
+          </region>
+        </region>
+        <region id="158" top="11124" color="#000000" bgColor="#ffffff">
+          <area terminator="true" />
+        </region>
+      </region>
+      <region id="159" top="11187" color="#000000" bgColor="#ffffff">
+        <area terminator="true" />
+      </region>
+    </region>
+  </regions>
+</worksheet>
