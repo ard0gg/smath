@@ -5,7 +5,7 @@
     <shortcut>XYPlotTools</shortcut>
     <identity>
       <id>9c877d02-b47d-454f-9ccb-6574c8734fe3</id>
-      <revision>41</revision>
+      <revision>42</revision>
     </identity>
     <calculation>
       <precision>2</precision>
@@ -28,44 +28,50 @@
       <assembly name="Custom Functions" version="1.1.7097.23285" guid="18dadffd-79a3-4cf9-aee1-d66deb0ea720" />
       <assembly name="SpecialFunctions" version="1.12.7109.29964" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
       <assembly name="TextRegion" version="1.11.7109.29964" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
-      <assembly name="X-Y Plot Region (JXCharts)" version="0.2.7173.25322" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
+      <assembly name="X-Y Plot Region (JXCharts)" version="0.2.7175.34428" guid="c12231ec-4873-43c1-a7d0-a167ebd17066" />
     </dependencies>
   </settings>
   <regions type="content">
-    <region id="0" top="54" color="#000000" bgColor="#ffffff">
+    <region id="0" top="81" color="#000000" bgColor="#ffffff">
       <area collapsed="true">
         <title lang="eng">
           <p>XY Plot Props </p>
         </title>
       </area>
-      <region id="1" top="90" color="#000000" bgColor="#ffffff">
-        <area collapsed="true">
+      <region id="1" top="117" color="#000000" bgColor="#ffffff">
+        <area collapsed="false">
           <title lang="eng">
             <p>X Y Tools</p>
           </title>
         </area>
-        <region id="2" top="126" color="#000000" bgColor="#ffffff">
+        <region id="2" top="153" color="#000000" bgColor="#ffffff">
           <area collapsed="false">
             <title lang="eng">
               <p>Change Log</p>
             </title>
           </area>
-          <region id="3" left="63" top="198" width="296" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+          <region id="3" left="81" top="225" width="296" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
             <text lang="eng">
               <p>08/21/2019: Initial Implementation </p>
             </text>
           </region>
-          <region id="4" top="261" color="#000000" bgColor="#ffffff">
+          <region id="4" left="81" top="243" width="702" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <text lang="eng">
+              <p>08/26/2019: Updated functions to support changes made XY Plot region v0.2.7175.34428
+                          - Hidden Property changed to Visible</p>
+            </text>
+          </region>
+          <region id="5" top="324" color="#000000" bgColor="#ffffff">
             <area terminator="true" />
           </region>
         </region>
-        <region id="5" top="333" color="#000000" bgColor="#ffffff">
+        <region id="6" top="396" color="#000000" bgColor="#ffffff">
           <area collapsed="false">
             <title lang="eng">
               <p>Constants/Units</p>
             </title>
           </area>
-          <region id="6" left="54" top="369" width="126" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+          <region id="7" left="72" top="432" width="126" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
             <math>
               <input>
                 <e type="operand" style="unit">ON</e>
@@ -87,7 +93,7 @@
               </result>
             </math>
           </region>
-          <region id="7" left="207" top="369" width="142" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
+          <region id="8" left="225" top="432" width="142" height="45" color="#000000" bgColor="#ffffff" fontSize="10">
             <math>
               <input>
                 <e type="operand" style="unit">TRUE</e>
@@ -109,19 +115,19 @@
               </result>
             </math>
           </region>
-          <region id="8" top="432" color="#000000" bgColor="#ffffff">
+          <region id="9" top="495" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Colors</p>
               </title>
             </area>
-            <region id="9" left="90" top="468" width="677" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="10" left="108" top="531" width="677" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
               <text lang="eng">
                 <p>Creating Units for each color. This list come from mkraska's interactive handbook
 The color units are defined as color.colorname</p>
               </text>
             </region>
-            <region id="10" left="108" top="513" width="679" height="639" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="11" left="126" top="576" width="679" height="639" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -272,7 +278,7 @@ The color units are defined as color.colorname</p>
                 </input>
               </math>
             </region>
-            <region id="11" left="63" top="1179" width="254" height="28" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="12" left="81" top="1242" width="254" height="28" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">colorList</e>
@@ -285,7 +291,7 @@ The color units are defined as color.colorname</p>
                 </input>
               </math>
             </region>
-            <region id="12" left="54" top="1206" width="406" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="13" left="72" top="1269" width="406" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">j</e>
@@ -322,12 +328,12 @@ The color units are defined as color.colorname</p>
                 </input>
               </math>
             </region>
-            <region id="13" left="99" top="1314" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="14" left="117" top="1377" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
               <text lang="eng">
                 <p>Adding Transparent</p>
               </text>
             </region>
-            <region id="14" left="108" top="1359" width="242" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="15" left="126" top="1422" width="242" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand" style="unit">color.transparent</e>
@@ -336,7 +342,7 @@ The color units are defined as color.colorname</p>
                 </input>
               </math>
             </region>
-            <region id="15" left="108" top="1386" width="352" height="35" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="16" left="126" top="1449" width="352" height="35" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">colorList</e>
@@ -348,7 +354,7 @@ The color units are defined as color.colorname</p>
                 </input>
               </math>
             </region>
-            <region id="16" left="99" top="1431" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="17" left="117" top="1494" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -359,23 +365,23 @@ The color units are defined as color.colorname</p>
                 </result>
               </math>
             </region>
-            <region id="17" top="1458" color="#000000" bgColor="#ffffff">
+            <region id="18" top="1521" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="18" top="1503" color="#000000" bgColor="#ffffff">
+          <region id="19" top="1566" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Grid Pattern</p>
               </title>
             </area>
-            <region id="19" left="54" top="1539" width="481" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="20" left="72" top="1602" width="481" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
               <text lang="eng">
                 <p>Creating Units for each grid pattern type.
 The grid pattern units are defined as gridPattern.pattern</p>
               </text>
             </region>
-            <region id="20" left="99" top="1602" width="149" height="99" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="21" left="117" top="1665" width="149" height="99" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -391,7 +397,7 @@ The grid pattern units are defined as gridPattern.pattern</p>
                 </input>
               </math>
             </region>
-            <region id="21" left="54" top="1719" width="447" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="22" left="72" top="1782" width="447" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">j</e>
@@ -420,7 +426,7 @@ The grid pattern units are defined as gridPattern.pattern</p>
                 </input>
               </math>
             </region>
-            <region id="22" left="54" top="1800" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="23" left="72" top="1863" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">M</e>
@@ -431,23 +437,23 @@ The grid pattern units are defined as gridPattern.pattern</p>
                 </result>
               </math>
             </region>
-            <region id="23" top="1935" color="#000000" bgColor="#ffffff">
+            <region id="24" top="1998" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="24" top="1980" color="#000000" bgColor="#ffffff">
+          <region id="25" top="2043" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Symbol Type</p>
               </title>
             </area>
-            <region id="25" left="63" top="2007" width="414" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="26" left="81" top="2070" width="414" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
               <text lang="eng">
                 <p>Creating Units for each trace symbol type.
 The symbol type units are defined as symType.Type</p>
               </text>
             </region>
-            <region id="26" left="135" top="2079" width="229" height="261" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="27" left="153" top="2142" width="229" height="261" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -472,7 +478,7 @@ The symbol type units are defined as symType.Type</p>
                 </input>
               </math>
             </region>
-            <region id="27" left="54" top="2367" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="28" left="72" top="2430" width="415" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">j</e>
@@ -494,14 +500,14 @@ The symbol type units are defined as symType.Type</p>
                   <e type="function" args="2">el</e>
                   <e type="bracket">(</e>
                   <e type="operator" args="2">:</e>
-                  <e type="operand" style="string">:j-1</e>
+                  <e type="operand" style="string">:temp</e>
                   <e type="function" args="3">concat</e>
                   <e type="function" args="1">str2num</e>
                   <e type="function" args="4">for</e>
                 </input>
               </math>
             </region>
-            <region id="28" left="90" top="2448" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="29" left="108" top="2511" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -512,17 +518,17 @@ The symbol type units are defined as symType.Type</p>
                 </result>
               </math>
             </region>
-            <region id="29" top="2475" color="#000000" bgColor="#ffffff">
+            <region id="30" top="2538" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="30" top="2520" color="#000000" bgColor="#ffffff">
+          <region id="31" top="2583" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Legend Position</p>
               </title>
             </area>
-            <region id="31" left="126" top="2556" width="141" height="153" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="32" left="144" top="2619" width="141" height="153" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">M</e>
@@ -541,7 +547,7 @@ The symbol type units are defined as symType.Type</p>
                 </input>
               </math>
             </region>
-            <region id="32" left="81" top="2727" width="399" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="33" left="99" top="2790" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">j</e>
@@ -563,14 +569,14 @@ The symbol type units are defined as symType.Type</p>
                   <e type="function" args="2">el</e>
                   <e type="bracket">(</e>
                   <e type="operator" args="2">:</e>
-                  <e type="operand" style="string">:j-1</e>
+                  <e type="operand" style="string">:temp</e>
                   <e type="function" args="3">concat</e>
                   <e type="function" args="1">str2num</e>
                   <e type="function" args="4">for</e>
                 </input>
               </math>
             </region>
-            <region id="33" left="117" top="2808" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="34" left="135" top="2871" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">M</e>
@@ -581,17 +587,17 @@ The symbol type units are defined as symType.Type</p>
                 </result>
               </math>
             </region>
-            <region id="34" top="2835" color="#000000" bgColor="#ffffff">
+            <region id="35" top="2898" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="35" top="2880" color="#000000" bgColor="#ffffff">
+          <region id="36" top="2943" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Number Format</p>
               </title>
             </area>
-            <region id="36" left="162" top="2988" width="157" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="37" left="180" top="3051" width="157" height="63" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">M</e>
@@ -605,7 +611,7 @@ The symbol type units are defined as symType.Type</p>
                 </input>
               </math>
             </region>
-            <region id="37" left="108" top="3078" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="38" left="126" top="3141" width="407" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">j</e>
@@ -634,7 +640,7 @@ The symbol type units are defined as symType.Type</p>
                 </input>
               </math>
             </region>
-            <region id="38" left="144" top="3159" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="39" left="162" top="3222" width="111" height="26" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">M</e>
@@ -645,21 +651,21 @@ The symbol type units are defined as symType.Type</p>
                 </result>
               </math>
             </region>
-            <region id="39" top="3195" color="#000000" bgColor="#ffffff">
+            <region id="40" top="3258" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="40" top="3240" color="#000000" bgColor="#ffffff">
+          <region id="41" top="3303" color="#000000" bgColor="#ffffff">
             <area terminator="true" />
           </region>
         </region>
-        <region id="41" top="3303" color="#000000" bgColor="#ffffff">
+        <region id="42" top="3366" color="#000000" bgColor="#ffffff">
           <area collapsed="false">
             <title lang="eng">
               <p>Individual setProp functions</p>
             </title>
           </area>
-          <region id="42" left="54" top="3339" width="753" height="88" color="#000000" bgColor="#80ff80" fontSize="10">
+          <region id="43" left="72" top="3402" width="753" height="88" color="#000000" bgColor="#80ff80" fontSize="10">
             <text lang="eng">
               <p>The Collapsable areas below hold the functions that directly call the setprop command  
 for the associated property. It is intended that all of the configurable properties within 
@@ -668,13 +674,13 @@ implement all properties. When known, it is my intention to indicate this status
 function definition. </p>
             </text>
           </region>
-          <region id="43" top="3456" color="#000000" bgColor="#ffffff">
+          <region id="44" top="3519" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Chart Properties</p>
               </title>
             </area>
-            <region id="44" left="54" top="3492" width="464" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="45" left="72" top="3555" width="464" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.points("points:integer","pName:string")
@@ -691,7 +697,7 @@ Sets pName.Points property to the value of points. </p>
                 </input>
               </math>
             </region>
-            <region id="45" left="54" top="3564" width="316" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="46" left="72" top="3627" width="316" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -706,7 +712,7 @@ Sets pName.Points property to the value of points. </p>
                 </input>
               </math>
             </region>
-            <region id="46" left="54" top="3627" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="47" left="72" top="3690" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.name("s:string","pName:string")
@@ -724,7 +730,7 @@ Note: All XY Plots with name p will be changed. Use with caution. </p>
                 </input>
               </math>
             </region>
-            <region id="47" left="54" top="3726" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="48" left="72" top="3789" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.name("s:string")
@@ -742,7 +748,7 @@ set the name of an XY Plot immediately before it is created. </p>
                 </input>
               </math>
             </region>
-            <region id="48" left="54" top="3834" width="612" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="49" left="72" top="3897" width="612" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.backColor("color:string", "pName:string")
@@ -760,7 +766,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="49" left="54" top="3915" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="50" left="72" top="3978" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">color</e>
@@ -772,7 +778,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="50" left="54" top="3951" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="51" left="72" top="4014" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.borderColor("color:string", "pName:string")
@@ -790,7 +796,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="51" left="54" top="4032" width="364" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="52" left="72" top="4095" width="364" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math optimize="2" decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">color</e>
@@ -802,17 +808,17 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="52" top="4104" color="#000000" bgColor="#ffffff">
+            <region id="53" top="4167" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="53" top="4185" color="#000000" bgColor="#ffffff">
+          <region id="54" top="4248" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Title Properties</p>
               </title>
             </area>
-            <region id="54" left="90" top="4221" width="474" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="55" left="108" top="4284" width="474" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.title("title:string","pName:string")
@@ -829,7 +835,7 @@ Sets the pName.Title.Text property to value of title.</p>
                 </input>
               </math>
             </region>
-            <region id="55" left="90" top="4284" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="56" left="108" top="4347" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -844,7 +850,7 @@ Sets the pName.Title.Text property to value of title.</p>
                 </input>
               </math>
             </region>
-            <region id="56" left="90" top="4338" width="524" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="57" left="108" top="4401" width="524" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>titleFont("font:string","pName:string")
@@ -862,7 +868,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </input>
               </math>
             </region>
-            <region id="57" left="90" top="4419" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="58" left="108" top="4482" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -877,7 +883,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </input>
               </math>
             </region>
-            <region id="58" left="81" top="4455" width="522" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="59" left="99" top="4518" width="522" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.titleColor("color:string","plotName:string")
@@ -895,7 +901,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="59" left="81" top="4536" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="60" left="99" top="4599" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -910,7 +916,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="60" left="90" top="4599" width="489" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="61" left="108" top="4662" width="489" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">title</e>
@@ -934,7 +940,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="61" left="99" top="4716" width="488" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="62" left="117" top="4779" width="488" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">title</e>
@@ -950,17 +956,17 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="62" top="4932" color="#000000" bgColor="#ffffff">
+            <region id="63" top="4995" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="63" top="5013" color="#000000" bgColor="#ffffff">
+          <region id="64" top="5076" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Grid Properties</p>
               </title>
             </area>
-            <region id="64" left="54" top="5040" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="65" left="72" top="5103" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XGrid("b:bool","pName:string")
@@ -977,7 +983,7 @@ Sets the pName.Grid.IsXGrid property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="65" left="54" top="5103" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="66" left="72" top="5166" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -992,7 +998,7 @@ Sets the pName.Grid.IsXGrid property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="66" left="54" top="5139" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="67" left="72" top="5202" width="426" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YGrid("b:bool","pName:string")
@@ -1009,7 +1015,7 @@ Sets the pName.Grid.IsYGrid property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="67" left="54" top="5202" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="68" left="72" top="5265" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
@@ -1021,7 +1027,7 @@ Sets the pName.Grid.IsYGrid property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="68" left="54" top="5256" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="69" left="72" top="5319" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.gridColor("color:string","pName:string")
@@ -1039,7 +1045,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="69" left="54" top="5337" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="70" left="72" top="5400" width="340" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">color</e>
@@ -1051,7 +1057,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="70" left="45" top="5418" width="525" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="71" left="63" top="5481" width="525" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.gridThickness("d:number","pName:string")
@@ -1068,7 +1074,7 @@ Sets the pName.Grid.GridThickness property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="71" left="45" top="5481" width="326" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="72" left="63" top="5544" width="326" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1080,7 +1086,7 @@ Sets the pName.Grid.GridThickness property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="72" left="45" top="5544" width="592" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="73" left="63" top="5607" width="592" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.gridPattern("pattern:string","pName:string")
@@ -1098,7 +1104,7 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="73" left="45" top="5625" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="74" left="63" top="5688" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">pattern</e>
@@ -1110,7 +1116,7 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="74" left="54" top="5697" width="611" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="75" left="72" top="5760" width="611" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
@@ -1138,7 +1144,7 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="75" left="54" top="5832" width="632" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="76" left="72" top="5895" width="632" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
@@ -1156,7 +1162,7 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="76" left="54" top="5895" width="271" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="77" left="72" top="5958" width="271" height="57" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">bool</e>
@@ -1175,7 +1181,7 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="77" left="54" top="5976" width="260" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="78" left="72" top="6039" width="260" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">bool</e>
@@ -1187,17 +1193,17 @@ Note: units with name prefix "gridPattern.{patthern}" are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="78" top="6075" color="#000000" bgColor="#ffffff">
+            <region id="79" top="6138" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="79" top="6138" color="#000000" bgColor="#ffffff">
+          <region id="80" top="6201" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>XAxis Properties</p>
               </title>
             </area>
-            <region id="80" left="36" top="6165" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="81" left="54" top="6228" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XMin("d:number","pName:string")
@@ -1214,7 +1220,7 @@ Sets the pName.XAxis.Min property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="81" left="36" top="6228" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="82" left="54" top="6291" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">d</e>
@@ -1226,7 +1232,7 @@ Sets the pName.XAxis.Min property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="82" left="36" top="6291" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="83" left="54" top="6354" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XMax("d:number","pName:string")
@@ -1243,7 +1249,7 @@ Sets the pName.XAxis.Max property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="83" left="36" top="6363" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="84" left="54" top="6426" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1255,7 +1261,7 @@ Sets the pName.XAxis.Max property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="84" left="36" top="6408" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="85" left="54" top="6471" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XTick("d:number","pName:string")
@@ -1272,7 +1278,7 @@ Sets the pName.XAxis.Tick property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="85" left="36" top="6471" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="86" left="54" top="6534" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1284,7 +1290,7 @@ Sets the pName.XAxis.Tick property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="86" left="36" top="6516" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="87" left="54" top="6579" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XDecPlaces("d:number","pName:string")
@@ -1301,7 +1307,7 @@ Sets the pName.XAxis.DecimalPlaces property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="87" left="36" top="6588" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="88" left="54" top="6651" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1313,7 +1319,7 @@ Sets the pName.XAxis.DecimalPlaces property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="88" left="36" top="6624" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="89" left="54" top="6687" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XNumFmt("numFmt:string","pName:string")
@@ -1331,7 +1337,7 @@ Note: Units wit the prefix numFmt. are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="89" left="36" top="6705" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="90" left="54" top="6768" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">numFmt</e>
@@ -1343,10 +1349,10 @@ Note: Units wit the prefix numFmt. are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="90" left="36" top="6741" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
-              <math>
+            <region id="91" left="54" top="6804" width="444" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math evaluate="false">
                 <description active="true" position="Top" lang="eng">
-                  <p>XY.hideXAxis("b:bool","pName:string"
+                  <p>XY.hideXAxis("b:bool","pName:string")
 Sets the pName.XAxis.Hidden property with the value of b.</p>
                 </description>
                 <input>
@@ -1360,19 +1366,60 @@ Sets the pName.XAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="91" left="36" top="6804" width="300" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
-              <math>
+            <region id="92" left="531" top="6840" width="226" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+              <text lang="eng">
+                <p>Removed in v0.2.7175.34428
+ </p>
+              </text>
+            </region>
+            <region id="93" left="54" top="6867" width="266" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math evaluate="false">
                 <input>
                   <e type="operand">b</e>
                   <e type="function" args="1">XY.hideXAxis</e>
-                  <e type="operand">bool</e>
+                  <e type="operand">b</e>
                   <e type="operand">PLOT</e>
                   <e type="function" args="2">XY.hideXAxis</e>
                   <e type="operator" args="2">:</e>
                 </input>
               </math>
             </region>
-            <region id="92" left="36" top="6903" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="94" left="63" top="6903" width="460" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <description active="true" position="Top" lang="eng">
+                  <p>XY.showXAxis("b:bool","pName:string")
+Sets the pName.YAxis.Visible property with the value of b.</p>
+                </description>
+                <input>
+                  <e type="operand">b</e>
+                  <e type="operand">pName</e>
+                  <e type="function" args="2">XY.showXAxis</e>
+                  <e type="operand" style="string">{pName}.XAxis.Visible</e>
+                  <e type="operand">b</e>
+                  <e type="function" args="2">setprop</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="95" left="540" top="6912" width="209" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+              <text lang="eng">
+                <p>Added in v0.2.7175.34428
+ </p>
+              </text>
+            </region>
+            <region id="96" left="63" top="6966" width="276" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <input>
+                  <e type="operand">b</e>
+                  <e type="function" args="1">XY.showXAxis</e>
+                  <e type="operand">b</e>
+                  <e type="operand">PLOT</e>
+                  <e type="function" args="2">XY.showXAxis</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="97" left="54" top="7011" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="false" position="Top" lang="eng">
                   <p></p>
@@ -1399,7 +1446,7 @@ Sets the pName.XAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="93" left="36" top="6993" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="98" left="54" top="7101" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">xmin</e>
@@ -1415,17 +1462,17 @@ Sets the pName.XAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="94" top="7074" color="#000000" bgColor="#ffffff">
+            <region id="99" top="7182" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="95" top="7146" color="#000000" bgColor="#ffffff">
+          <region id="100" top="7254" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>YAxis Properties</p>
               </title>
             </area>
-            <region id="96" left="63" top="7191" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="101" left="81" top="7299" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YMin("d:number","pName:string")
@@ -1442,7 +1489,7 @@ Sets the pName.YAxis.Min property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="97" left="63" top="7263" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="102" left="81" top="7371" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1454,7 +1501,7 @@ Sets the pName.YAxis.Min property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="98" left="72" top="7299" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="103" left="90" top="7407" width="396" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YMax("d:number","pName:string")
@@ -1471,7 +1518,7 @@ Sets the pName.YAxis.Max property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="99" left="72" top="7362" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="104" left="90" top="7470" width="212" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1483,7 +1530,7 @@ Sets the pName.YAxis.Max property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="100" left="72" top="7398" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="105" left="90" top="7506" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YTick("d:number","pName:string")
@@ -1500,7 +1547,7 @@ Sets the pName.YAxis.Tick property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="101" left="72" top="7461" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="106" left="90" top="7569" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1512,7 +1559,7 @@ Sets the pName.YAxis.Tick property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="102" left="72" top="7497" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="107" left="90" top="7605" width="514" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YDecPlaces("d:number","pName:string")
@@ -1529,7 +1576,7 @@ Sets the pName.YAxis.DecimalPlaces property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="103" left="72" top="7569" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="108" left="90" top="7677" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1541,7 +1588,7 @@ Sets the pName.YAxis.DecimalPlaces property with the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="104" left="72" top="7614" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="109" left="90" top="7722" width="567" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YNumFmt("numFmt:string","pName:string")
@@ -1559,7 +1606,7 @@ Note: Units wit the prefix numFmt. are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="105" left="72" top="7695" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="110" left="90" top="7803" width="330" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">numFmt</e>
@@ -1571,10 +1618,10 @@ Note: Units wit the prefix numFmt. are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="106" left="72" top="7722" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
-              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+            <region id="111" left="90" top="7830" width="444" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math evaluate="false" decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
-                  <p>XY.hideYAxis("b:bool","pName:string"
+                  <p>XY.hideYAxis("b:bool","pName:string")
 Sets the pName.YAxis.Hidden property with the value of b.</p>
                 </description>
                 <input>
@@ -1588,8 +1635,13 @@ Sets the pName.YAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="107" left="72" top="7785" width="276" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
-              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+            <region id="112" left="576" top="7848" width="226" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+              <text lang="eng">
+                <p>Removed in v0.2.7175.34428</p>
+              </text>
+            </region>
+            <region id="113" left="90" top="7893" width="266" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math evaluate="false" decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
                   <e type="function" args="1">XY.hideYAxis</e>
@@ -1600,7 +1652,42 @@ Sets the pName.YAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="108" left="72" top="7875" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="114" left="99" top="7947" width="460" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <description active="true" position="Top" lang="eng">
+                  <p>XY.showYAxis("b:bool","pName:string")
+Sets the pName.YAxis.Visible property with the value of b.</p>
+                </description>
+                <input>
+                  <e type="operand">b</e>
+                  <e type="operand">pName</e>
+                  <e type="function" args="2">XY.showYAxis</e>
+                  <e type="operand" style="string">{pName}.YAxis.Visible</e>
+                  <e type="operand">b</e>
+                  <e type="function" args="2">setprop</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="115" left="576" top="7956" width="209" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+              <text lang="eng">
+                <p>Added in v0.2.7175.34428
+ </p>
+              </text>
+            </region>
+            <region id="116" left="99" top="8010" width="276" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <input>
+                  <e type="operand">b</e>
+                  <e type="function" args="1">XY.showYAxis</e>
+                  <e type="operand">b</e>
+                  <e type="operand">PLOT</e>
+                  <e type="function" args="2">XY.showYAxis</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="117" left="90" top="8073" width="449" height="81" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">ymin</e>
@@ -1624,7 +1711,7 @@ Sets the pName.YAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="109" left="72" top="7965" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="118" left="90" top="8163" width="472" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">ymin</e>
@@ -1640,17 +1727,17 @@ Sets the pName.YAxis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="110" top="8127" color="#000000" bgColor="#ffffff">
+            <region id="119" top="8325" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="111" top="8199" color="#000000" bgColor="#ffffff">
+          <region id="120" top="8397" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Y2Axis Properties</p>
               </title>
             </area>
-            <region id="112" left="54" top="8253" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="121" left="72" top="8451" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.Y2Min("d:number", "pName:string")
@@ -1667,7 +1754,7 @@ Sets the pName.Y2Axis.Min property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="113" left="54" top="8325" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="122" left="72" top="8523" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1679,7 +1766,7 @@ Sets the pName.Y2Axis.Min property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="114" left="54" top="8370" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="123" left="72" top="8568" width="410" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.Y2Max("d:number","pName:string")
@@ -1696,7 +1783,7 @@ Sets the pName.Y2Axis.Max property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="115" left="54" top="8433" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="124" left="72" top="8631" width="224" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1708,7 +1795,7 @@ Sets the pName.Y2Axis.Max property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="116" left="54" top="8469" width="424" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="125" left="72" top="8667" width="424" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.Y2Tick("d:number","pName:string")
@@ -1725,7 +1812,7 @@ Sets the pName.Y2Axis.Tick property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="117" left="54" top="8532" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="126" left="72" top="8730" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1737,7 +1824,7 @@ Sets the pName.Y2Axis.Tick property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="118" left="54" top="8577" width="469" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="127" left="72" top="8775" width="469" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.IsY2Axis("b:bool","pName:string")
@@ -1754,7 +1841,7 @@ Sets the pName.Y2Axis.IsY2Axis property to the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="119" left="54" top="8640" width="262" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="128" left="72" top="8838" width="262" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
@@ -1766,7 +1853,7 @@ Sets the pName.Y2Axis.IsY2Axis property to the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="120" left="54" top="8676" width="528" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="129" left="72" top="8874" width="528" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.Y2DecPlaces("d:number","pName:string")
@@ -1783,7 +1870,7 @@ Sets the pNameY2Axis.DecimalPlaces property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="121" left="54" top="8739" width="300" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="130" left="72" top="8937" width="300" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">d</e>
@@ -1795,7 +1882,7 @@ Sets the pNameY2Axis.DecimalPlaces property to the value of d.</p>
                 </input>
               </math>
             </region>
-            <region id="122" left="54" top="8775" width="581" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="131" left="72" top="8973" width="581" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.Y2NumFmt("numFmt:string","pName:string")
@@ -1813,7 +1900,7 @@ Note: Units wit the prefix numFmt.{fmt} are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="123" left="54" top="8856" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="132" left="72" top="9054" width="342" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">numFmt</e>
@@ -1825,10 +1912,10 @@ Note: Units wit the prefix numFmt.{fmt} are defined above.</p>
                 </input>
               </math>
             </region>
-            <region id="124" left="54" top="8901" width="466" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="133" left="72" top="9099" width="466" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
-                  <p>XY.hideY2Axis("b:bool","pName:string"
+                  <p>XY.hideY2Axis("b:bool","pName:string")
 Sets the pName.Y2Axis.Hidden property with the value of b.</p>
                 </description>
                 <input>
@@ -1842,7 +1929,7 @@ Sets the pName.Y2Axis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="125" left="54" top="8964" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="134" left="72" top="9162" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">b</e>
@@ -1854,7 +1941,42 @@ Sets the pName.Y2Axis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="126" left="54" top="9027" width="493" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="135" left="72" top="9216" width="474" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <description active="true" position="Top" lang="eng">
+                  <p>XY.showY2Axis("b:bool","pName:string")
+Sets the pName.YAxis.Visible property with the value of b.</p>
+                </description>
+                <input>
+                  <e type="operand">b</e>
+                  <e type="operand">pName</e>
+                  <e type="function" args="2">XY.showY2Axis</e>
+                  <e type="operand" style="string">{pName}.Y2Axis.Visible</e>
+                  <e type="operand">b</e>
+                  <e type="function" args="2">setprop</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="136" left="549" top="9225" width="209" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+              <text lang="eng">
+                <p>Added in v0.2.7175.34428
+ </p>
+              </text>
+            </region>
+            <region id="137" left="72" top="9279" width="288" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+              <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
+                <input>
+                  <e type="operand">b</e>
+                  <e type="function" args="1">XY.showY2Axis</e>
+                  <e type="operand">b</e>
+                  <e type="operand">PLOT</e>
+                  <e type="function" args="2">XY.showY2Axis</e>
+                  <e type="operator" args="2">:</e>
+                </input>
+              </math>
+            </region>
+            <region id="138" left="72" top="9351" width="493" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">y2min</e>
@@ -1881,7 +2003,7 @@ Sets the pName.Y2Axis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="127" left="54" top="9126" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="139" left="72" top="9450" width="532" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">y2min</e>
@@ -1897,17 +2019,17 @@ Sets the pName.Y2Axis.Hidden property with the value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="128" top="9180" color="#000000" bgColor="#ffffff">
+            <region id="140" top="9504" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="129" top="9243" color="#000000" bgColor="#ffffff">
+          <region id="141" top="9567" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>XY Label Properties</p>
               </title>
             </area>
-            <region id="130" left="54" top="9297" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="142" left="72" top="9621" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.XLabel("s:string","pName:string")
@@ -1924,7 +2046,7 @@ Sets the pName.XYLabel.XLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="131" left="54" top="9369" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="143" left="72" top="9693" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">s</e>
@@ -1936,7 +2058,7 @@ Sets the pName.XYLabel.XLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="132" left="54" top="9414" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="144" left="72" top="9738" width="448" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YLabel("s:string","pName:string")
@@ -1953,7 +2075,7 @@ Sets the pName.XYLabel.YLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="133" left="54" top="9477" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="145" left="72" top="9801" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">s</e>
@@ -1965,7 +2087,7 @@ Sets the pName.XYLabel.YLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="134" left="63" top="9531" width="463" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="146" left="81" top="9855" width="463" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.YLabel("s:string","pName:string")
@@ -1982,7 +2104,7 @@ Sets the pName.XYLabel.YLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="135" left="63" top="9594" width="250" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="147" left="81" top="9918" width="250" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">s</e>
@@ -1994,7 +2116,7 @@ Sets the pName.XYLabel.YLabel property with the value of s.</p>
                 </input>
               </math>
             </region>
-            <region id="136" left="63" top="9630" width="540" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="148" left="81" top="9954" width="540" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.labelFont("font:string","pName:string")
@@ -2012,7 +2134,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </input>
               </math>
             </region>
-            <region id="137" left="63" top="9711" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="149" left="81" top="10035" width="324" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">font</e>
@@ -2024,7 +2146,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </input>
               </math>
             </region>
-            <region id="138" left="63" top="9738" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="150" left="81" top="10062" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.LabelFontColor("color:string","2:string")
@@ -2042,7 +2164,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="139" left="63" top="9819" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="151" left="81" top="10143" width="404" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">color</e>
@@ -2054,7 +2176,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="140" left="72" top="9891" width="585" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="152" left="90" top="10215" width="585" height="105" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">xlabel</e>
@@ -2082,7 +2204,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="141" left="72" top="10044" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="153" left="90" top="10368" width="628" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">xlabel</e>
@@ -2100,17 +2222,17 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="142" top="10098" color="#000000" bgColor="#ffffff">
+            <region id="154" top="10422" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="143" top="10152" color="#000000" bgColor="#ffffff">
+          <region id="155" top="10476" color="#000000" bgColor="#ffffff">
             <area collapsed="false">
               <title lang="eng">
                 <p>Legend Properties</p>
               </title>
             </area>
-            <region id="144" left="45" top="10197" width="551" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="156" left="63" top="10521" width="551" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendBorder("b:bool","pName:string")
@@ -2127,7 +2249,7 @@ Sets the pName.Legend.IsBorderVisible property to value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="145" left="45" top="10269" width="314" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="157" left="63" top="10593" width="314" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">b</e>
@@ -2139,7 +2261,7 @@ Sets the pName.Legend.IsBorderVisible property to value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="146" left="45" top="10305" width="512" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="158" left="63" top="10629" width="512" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legend("b:bool","pName:string")
@@ -2156,7 +2278,7 @@ Sets the pName.Legend.IsLegendVisible property to value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="147" left="45" top="10377" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="159" left="63" top="10701" width="236" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">b</e>
@@ -2168,7 +2290,7 @@ Sets the pName.Legend.IsLegendVisible property to value of b.</p>
                 </input>
               </math>
             </region>
-            <region id="148" left="45" top="10422" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="160" left="63" top="10746" width="640" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendBackground("color:string","pName:string")
@@ -2186,7 +2308,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="149" left="45" top="10503" width="428" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="161" left="63" top="10827" width="428" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">color</e>
@@ -2198,7 +2320,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="150" left="45" top="10539" width="663" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="162" left="63" top="10863" width="663" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendBorderColor("color:string","pName:string")
@@ -2216,7 +2338,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="151" left="45" top="10620" width="442" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="163" left="63" top="10944" width="442" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">color</e>
@@ -2228,7 +2350,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="152" left="45" top="10665" width="668" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="164" left="63" top="10989" width="668" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendPosition("position:number","pName:string")
@@ -2246,7 +2368,7 @@ Note: Units with prefix "legend.{position}" previously defined. </p>
                 </input>
               </math>
             </region>
-            <region id="153" left="45" top="10746" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="165" left="63" top="11070" width="452" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
                 <input>
                   <e type="operand">position</e>
@@ -2258,7 +2380,7 @@ Note: Units with prefix "legend.{position}" previously defined. </p>
                 </input>
               </math>
             </region>
-            <region id="154" left="54" top="10845" width="586" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="166" left="72" top="11124" width="586" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendTextColor("color:string","pName:string")
@@ -2276,7 +2398,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="155" left="54" top="10926" width="416" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="167" left="72" top="11205" width="416" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">color</e>
@@ -2288,7 +2410,7 @@ Note: Units with prefix "color.{color}" have been previously defined.</p>
                 </input>
               </math>
             </region>
-            <region id="156" left="54" top="10962" width="482" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="168" left="72" top="11241" width="546" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <description active="true" position="Top" lang="eng">
                   <p>XY.legendFont("font:string","pName:string")
@@ -2297,16 +2419,16 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </description>
                 <input>
                   <e type="operand">font</e>
-                  <e type="operand">p</e>
+                  <e type="operand">pName</e>
                   <e type="function" args="2">XY.legendFont</e>
-                  <e type="operand" style="string">{p}.Legend.LegendFont</e>
+                  <e type="operand" style="string">{pName}.Legend.LegendFont</e>
                   <e type="operand">font</e>
                   <e type="function" args="2">setprop</e>
                   <e type="operator" args="2">:</e>
                 </input>
               </math>
             </region>
-            <region id="157" left="54" top="11043" width="336" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+            <region id="169" left="72" top="11322" width="336" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
               <math>
                 <input>
                   <e type="operand">font</e>
@@ -2318,23 +2440,23 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
                 </input>
               </math>
             </region>
-            <region id="158" top="11106" color="#000000" bgColor="#ffffff">
+            <region id="170" top="11403" color="#000000" bgColor="#ffffff">
               <area terminator="true" />
             </region>
           </region>
-          <region id="159" top="11178" color="#000000" bgColor="#ffffff">
+          <region id="171" top="11466" color="#000000" bgColor="#ffffff">
             <area terminator="true" />
           </region>
         </region>
-        <region id="160" top="11241" color="#000000" bgColor="#ffffff">
+        <region id="172" top="11529" color="#000000" bgColor="#ffffff">
           <area terminator="true" />
         </region>
       </region>
-      <region id="161" top="22419" color="#000000" bgColor="#ffffff">
+      <region id="173" top="11556" color="#000000" bgColor="#ffffff">
         <area terminator="true" />
       </region>
     </region>
-    <region id="162" left="81" top="22644" width="134" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="174" left="81" top="11738" width="134" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
         <input>
           <e type="operand">PLOT</e>
@@ -2343,7 +2465,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </input>
       </math>
     </region>
-    <region id="163" left="297" top="22671" width="253" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="175" left="297" top="11765" width="253" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="unit">color.darkorchid</e>
@@ -2354,7 +2476,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="164" left="81" top="22680" width="196" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="176" left="81" top="11774" width="196" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="unit">color.tan</e>
@@ -2365,7 +2487,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="165" left="81" top="22707" width="499" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="177" left="81" top="11801" width="499" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="string">sin(x)/x</e>
@@ -2378,7 +2500,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="166" left="81" top="22734" width="187" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="178" left="81" top="11828" width="187" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">10</e>
@@ -2392,7 +2514,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="167" left="81" top="22761" width="219" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="179" left="81" top="11855" width="219" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
       <math decimalPlaces="4" significantDigitsMode="false" exponentialThreshold="5">
         <input>
           <e type="operand">1.5</e>
@@ -2406,7 +2528,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="168" left="81" top="22788" width="405" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="180" left="81" top="11882" width="405" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="unit">ON</e>
@@ -2420,7 +2542,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="169" left="81" top="22815" width="547" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="181" left="81" top="11909" width="547" height="32" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="string">X-Axis</e>
@@ -2434,7 +2556,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="170" left="81" top="22842" width="225" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="182" left="81" top="11936" width="225" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1.5</e>
@@ -2448,7 +2570,7 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="171" left="81" top="22869" width="196" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="183" left="81" top="11963" width="196" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="string">Y2-Axis</e>
@@ -2459,19 +2581,30 @@ Example of font input: "Courier,12pt,style=bold,italic" </p>
         </result>
       </math>
     </region>
-    <region id="172" left="81" top="22923" width="464" height="257" color="#000000" bgColor="#ffffff" fontSize="10" showInputData="False">
+    <region id="184" left="81" top="11999" width="133" height="30" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand" style="unit">ON</e>
+          <e type="function" args="1">XY.legend</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region id="185" left="135" top="12051" width="464" height="257" color="#000000" bgColor="#ffffff" fontSize="10" showInputData="False">
       <xyplot width="454" height="249" points="100" name="XYPlot1">
         <chartstyle backcolor="Tan" bordercolor="DarkOrchid" />
         <propertiessource index="1" sourcetype="PropertyGrid" />
         <grid gridcolor="Green" gridpattern="DashDotDot" gridthickness="1.5" isxgrid="true" isygrid="true" />
-        <xaxes xmin="-10" xmax="10" xtick="3" hidden="False" decimalplaces="3" numberformat="General" />
-        <yaxes ymin="-1.5" ymax="1.5" ytick="0.5" hidden="False" decimalplaces="3" numberformat="General" />
-        <y2axes isy2axis="true" y2min="-1.5" y2max="1.5" y2tick="0.5" hidden="False" decimalplaces="3" numberformat="General" />
+        <xaxes xmin="-10" xmax="10" xtick="3" visible="True" decimalplaces="3" numberformat="General" />
+        <yaxes ymin="-1.5" ymax="1.5" ytick="0.5" visible="True" decimalplaces="3" numberformat="General" />
+        <y2axes isy2axis="true" y2min="-1.5" y2max="1.5" y2tick="0.5" visible="True" decimalplaces="3" numberformat="General" />
         <title2d title="sin(x)/x" titlefont="Courier New, 16pt, style=Bold" titlefontcolor="HotPink" />
         <xylabel labelfont="Courier New, 14pt, style=Bold" labelfontcolor="Brown" tickfont="Arial, 8pt" tickfontcolor="Black" xlabel="X-Axis" ylabel="Y-Axis" y2label="Y2-Axis" />
-        <legend isbordervisible="true" islegendvisible="false" legendbackcolor="White" legendbordercolor="Black" legendfont="Arial, 8pt" legendposition="NorthEast" textcolor="Black" />
+        <legend isbordervisible="true" islegendvisible="true" legendbackcolor="White" legendbordercolor="Black" legendfont="Microsoft Sans Serif, 8.25pt" legendposition="NorthEast" textcolor="Black" />
         <traces>
-          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="false" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
+          <trace seriesname="" isy2data="false" isvisible="true" plotmethod="Lines" lineantialias="true" linecolor="Blue" linethickness="1" linepattern="Solid" symbolantialias="false" symbolsize="8" symboltype="None" symbolborderthickness="1" symbolbordercolor="Black" symbolfillcolor="White" />
         </traces>
         <input>
           <e type="operand">x</e>
